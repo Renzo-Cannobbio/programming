@@ -84,7 +84,7 @@ public class guiCalculator extends JFrame implements ActionListener
         panelCenterLayout.setVgap(10);
         panelCenter.setLayout(panelCenterLayout); 
         
-        // operadores chicos
+        // simple operators
         JPanel panelSimpleExpressions = new JPanel();
         //panelCenter.setBackground(Color.blue);        
         GridLayout panelSimpleExpressionsLayout = new GridLayout(5,1);
@@ -92,7 +92,7 @@ public class guiCalculator extends JFrame implements ActionListener
         panelSimpleExpressionsLayout.setVgap(10);
         panelSimpleExpressions.setLayout(panelSimpleExpressionsLayout); 
         
-        // operadores grandes
+        // big operators
         JPanel panelControl = new JPanel();
         //panelCenter.setBackground(Color.blue);        
         GridLayout panelControlLayout = new GridLayout(5,1);
@@ -100,7 +100,7 @@ public class guiCalculator extends JFrame implements ActionListener
         panelControlLayout.setVgap(10);
         panelControl.setLayout(panelControlLayout); 
         
-        // panel principal
+        // principal panel
         BorderLayout mainLayout = new BorderLayout();
         setLayout(mainLayout);
                 
@@ -112,8 +112,8 @@ public class guiCalculator extends JFrame implements ActionListener
         //create display
         display = new JTextField("");        
         Font displayFont = new Font("SansSerif", Font.BOLD, 24);
-    display.setFont(displayFont);
-    display.setHorizontalAlignment(JTextField.RIGHT);        
+        display.setFont(displayFont);
+        display.setHorizontalAlignment(JTextField.RIGHT);        
         display.setPreferredSize(new Dimension(100,35));
         panelTop.add(display);
         
@@ -132,7 +132,7 @@ public class guiCalculator extends JFrame implements ActionListener
             panelCenter.add(buttons[i]);
         }
         
-       //create buttons Operadores Chicos
+       //create buttons simple operators
         buttonsSimpleExpressions = new JButton[5];
         for (int i = 0; i < buttonsSimpleExpressions.length; i++) {
             buttonsSimpleExpressions[i] = new JButton();
@@ -144,7 +144,7 @@ public class guiCalculator extends JFrame implements ActionListener
         }
         
 
-       //create buttons Operadores Grandes
+       //create buttons big operators
         buttonsControl = new JButton[5];
         for (int i = 0; i < buttonsControl.length; i++) 
         {
@@ -199,7 +199,7 @@ public class guiCalculator extends JFrame implements ActionListener
         displayText = display.getText();
         int len = displayText.length();
         
-        String command = e.getActionCommand();
+        String command = e.getActionCommand(); //define buttons of calculator
         if (command.equals("CMD_1"))
         {
             displayText = displayText + "1";
@@ -378,7 +378,7 @@ public class guiCalculator extends JFrame implements ActionListener
             else if (op.equals("-"))    v = stackNumber.get(stackNumber.size() - 1) - v;
             else if (op.equals("*"))    v = stackNumber.get(stackNumber.size() - 1) * v;
             else if (op.equals("/"))    v = stackNumber.get(stackNumber.size() - 1) / v;
-            else if (op.equals("!"))    v = MethodFactorial( v); //!8
+            else if (op.equals("!"))    v = MethodFactorial( v); //8!
             
             if (!stackOperator.isEmpty())
             {
