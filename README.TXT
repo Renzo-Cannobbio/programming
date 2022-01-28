@@ -1,12 +1,6 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
-------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Assessment PROG5001 Calculator  
+PURPOSE OF PROJECT: Create a graphic calculator to understand the concepts of Graphic User Interface
+DATE: 28/01/2022
+AUTHOR: Renzo Cannobbio
+USER INSTRUCTIONS: open the file package.bluej using the program BlueJ version 5.0.2 or newer
